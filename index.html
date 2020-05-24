@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="background.jpg"  id="transitions">
+					<h1>Vue.js</h1>
+					<img class="vue_img" src="img/vue.jpg">
+					<p>Created by Adzinets Yaraslava</p>
+				</section>
+				<section data-background="background.jpg"  id="transitions">
+					<h3>What is a Vue?</h3>
+					<ul>
+						<li class="fragment">Modern progressive framework</li>
+						<li class="fragment">Released: February 2014</li>
+						<li class="fragment">Latest version: 2.6.11</li>
+						<li class="fragment">Designed to create client-level web applications</li>
+					</ul>
+				</section>
+				<section data-background="background.jpg"  id="transitions">
+					<h3>Benefits of Vue.js</h3>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						<ul>
+							<li class="fragment grow">Virtual DOM</li>
+							<li class="fragment grow">Integration</li>
+							<li class="fragment grow">Ease of use</li>
+							<li class="fragment grow">Detailed documentation</li>
+							<li class="fragment grow">light weight framework</li>
+						</ul>
+					</blockquote>
+				</section>
+				<section data-background="background.jpg">
+					<section data-background="background.jpg">
+						<h2>Vue.js Concepts</h2>
+						<ol>
+							<li>Reactivity</li>
+							<li>Instance</li>
+							<li>Components</li>
+							<li>Directives</li>
+							<li>Animation and transitions</li>
+						</ol>
+					</section>
+					<section data-background="background.jpg">
+						<h2>Reactivity</h2>
+						<img src="img/reactivity.jpg" class="fragment reactivity_img">
+					</section>
+					<section data-background="background.jpg">
+						<h4>Creating an object of class Vue</h4>
+						<pre><code class="hljs" data-trim data-line-numbers="">
+							new Vue ({
+								el: '#app',
+								data: {
+									message: 'Hello, Vue!',
+								},
+								methods: {
+									changeText () {
+										this.message = 'New text'
+									}
+								}
+							});
+
+							&lt;div id="app"&gt;
+								&lt;p&gt;{{ message }}&lt;/p&gt;
+								&lt;button v-on:click="changeText"&gt;change&lt;/button&gt;
+							&lt;/div&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h2>Components</h2>
+						<p>Components - this is the separation of the code, its encapsulation, into independent parts allowing the reuse of the code.</p>
+						<ul>
+							<li class="fragment">Code Separation</li>
+							<li class="fragment">Code separation out of sight</li>
+							<li class="fragment">Conditional code separation</li>
+						</ul>
+					</section>
+					<section data-background="background.jpg">
+						<h2>Directives</h2>
+						<p>Directives - special attributes prefixed with v-.The directive reactively applies changes to the DOM 
+							when updating the value of this expression.</p>
+						<pre><code class="hljs" data-trim data-line-numbers="1">
+							&lt;p v-if="seen"&gt;I can be seen now&lt;/p&gt;
+						</code></pre>
+						<br>
+						<p>In this example, the v-if directive will remove or insert the &lt;/p&gt; element depending on the truth of the value of the seen expression.</p>
+					</section>
+					<section>
+						<h3>Animation and transitions</h3>
+						<p>Vue allows you to animate transitions when adding, updating, and deleting DOM objects.</p>
+						<ul>
+							<li class="fragment">automatically use CSS classes for animations and transitions</li>
+							<li class="fragment">integrate third-party libraries of CSS animations, for example, animate.css</li>
+							<li class="fragment">use JavaScript to work with the DOM directly in transition hooks</li>
+							<li class="fragment">integrate third-party libraries of JavaScript animations, for example, Velocity.js</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background="background.jpg">
+					<h3>List of companies using Vue:</h3>
+					<ul>
+						<li>Ozon</li>
+						<li>Alibaba</li>
+						<li>Спортмастер</li>
+						<li>dStar</li>
+						<li>GitLab</li>
+						<li>9Gag</li>
+						<li>Nintendo</li>
+						<li>Grammarly</li>
+					</ul>
+				</section>
+				<section data-background="background.jpg">
+					<h2>Presentation is over!</h2>
+					<img src="img/finish.jpg" class="finish_img">
+					<h3>Thank you for the attention!</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
